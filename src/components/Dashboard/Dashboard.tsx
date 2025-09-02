@@ -32,15 +32,20 @@ export function Dashboard() {
   };
 
   return (
-    <div className="flex min-h-screen bg-base-200">
-      <Sidebar activeTab={activeTab} onTabChange={setActiveTab} />
+    <div className="flex h-screen bg-base-200">
+      {/* Sidebar */}
+      <aside className="flex-col hidden shadow-md md:flex md:w-64 bg-base-100">
+        <Sidebar activeTab={activeTab} onTabChange={setActiveTab} />
+      </aside>
 
-      <div className="flex flex-col flex-1">
-        <main className="flex-1 p-4 pb-20 md:p-6 lg:p-8 md:pb-8">
+      {/* Main Content */}
+      <div className="flex flex-col flex-1 overflow-hidden">
+        <main className="flex-1 p-4 pb-20 overflow-y-auto md:p-6 lg:p-8 md:pb-8">
           {renderContent()}
         </main>
       </div>
 
+      {/* Bottom Navigation for mobile */}
       <BottomNavigation activeTab={activeTab} onTabChange={setActiveTab} />
     </div>
   );
