@@ -14,7 +14,6 @@ interface SidebarProps {
 }
 
 export function Sidebar({ activeTab, onTabChange }: SidebarProps) {
-
   // const menuItems = [
   //   { id: "dashboard", label: "Dashboard", icon: Home },
   //   ...(user?.role === "admin"
@@ -38,19 +37,16 @@ export function Sidebar({ activeTab, onTabChange }: SidebarProps) {
   ];
 
   return (
-    <div className="hidden shadow-lg md:flex md:w-64 md:flex-col bg-base-100">
-      <div className="flex flex-col flex-1">
+    <div className="hidden h-screen shadow-md md:flex md:w-64 md:flex-col bg-base-100">
+      <div className="flex flex-col flex-1 h-full">
         {/* Logo */}
         <div className="p-6 border-b border-gray-200">
           <h1 className="text-2xl font-bold text-gray-800">DashBoard</h1>
-          <p className="mt-1 text-sm text-gray-500">
-            {/* {user?.role === "admin" ? "Admin Panel" : "Member Portal"} */}
-            Admin Panel
-          </p>
+          <p className="mt-1 text-sm text-gray-500">Admin Panel</p>
         </div>
 
-        {/* Navigation */}
-        <nav className="flex-1 px-4 py-6 space-y-2">
+        {/* Navigation (Scrollable) */}
+        <nav className="flex-1 px-4 py-6 space-y-2 overflow-y-auto">
           {menuItems.map((item) => {
             const Icon = item.icon;
             return (
@@ -78,22 +74,15 @@ export function Sidebar({ activeTab, onTabChange }: SidebarProps) {
           </button>
         </nav>
 
-        {/* User Info & Logout */}
-        <div className="p-4 border-t border-gray-200">
+        {/* User Info & Logout (Sticky at Bottom) */}
+        <div className="p-4 mt-auto border-t border-gray-200">
           <div className="p-3 mb-3 rounded-lg bg-gray-50">
             <p className="text-sm font-medium text-gray-800">
               Zahid Hasan Hridoy
-              {/* {user?.full_name} */}
             </p>
-            <p className="text-xs text-gray-500">
-              Hridoy@gmail.com
-              {/* {user?.email} */}
-            </p>
+            <p className="text-xs text-gray-500">Hridoy@gmail.com</p>
           </div>
-          <button
-            // onClick={signOut}
-            className="flex items-center w-full px-4 py-2 transition-colors duration-200 rounded-lg text-error hover:bg-error/10"
-          >
+          <button className="flex items-center w-full px-4 py-2 transition-colors duration-200 rounded-lg text-error hover:bg-error/10">
             <LogOut className="w-4 h-4 mr-3" />
             Sign Out
           </button>

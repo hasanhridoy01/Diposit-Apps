@@ -26,9 +26,9 @@ export function BottomNavigation({
     { id: "dashboard", label: "Home", icon: Home },
 
     // { id: "members", label: "Members", icon: Users },
-    { id: "deposits", label: "Deposits", icon: DollarSign },
+    // { id: "deposits", label: "Deposits", icon: DollarSign },
 
-    // { id: "deposit", label: "Deposit", icon: DollarSign },
+    { id: "deposit", label: "Deposit", icon: DollarSign },
 
     { id: "settings", label: "Settings", icon: Settings },
   ];

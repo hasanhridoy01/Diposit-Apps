@@ -47,7 +47,7 @@ export function DashboardOverview() {
             Welcome back,
             <br />
             {/* {user?.full_name} */}
-            <span className="text-blue-700">Fahim Arman Hridi!</span>
+            <span className="text-blue-700">Admin!</span>
           </h1>
           <p className="mt-1 text-gray-600">
             {/* {user?.role === 'admin' ? 'Manage your platform efficiently' : 'Track your deposits and account activity'} */}

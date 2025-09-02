@@ -137,8 +137,8 @@ export function DepositForm() {
         </div>
 
         {/* Instructions */}
-        <div className="space-y-4">
-          <div className="p-6 border border-blue-100 bg-blue-50 rounded-xl">
+        <div className="mb-2 space-y-4">
+          <div className="p-6 border border-blue-400 bg-blue-50 rounded-xl">
             <h3 className="mb-3 text-lg font-semibold text-blue-800">
               Payment Instructions
             </h3>
@@ -172,23 +172,32 @@ export function DepositForm() {
             </div>
           </div>
 
-          <div className="p-6 border border-yellow-100 bg-yellow-50 rounded-xl">
-            <h3 className="mb-2 text-lg font-semibold text-warning">
+          <div className="p-6 mx-auto border border-yellow-400 bg-yellow-50 rounded-xl">
+            <h3 className="mb-3 text-xl font-semibold text-yellow-700">
               Account Details
             </h3>
-            <div className="space-y-2 text-sm text-warning">
-              <p>
-                <strong>Bank:</strong> ABC Bank Ltd.
-              </p>
-              <p>
-                <strong>Account Name:</strong> DashBoard Ltd.
-              </p>
-              <p>
-                <strong>Account Number:</strong> 1234567890
-              </p>
-              <p>
-                <strong>Routing Number:</strong> 123456789
-              </p>
+
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-yellow-800 border-collapse">
+                <tbody>
+                  <tr className="border-b border-yellow-200">
+                    <th className="py-2 font-medium">Bank</th>
+                    <td className="py-2">ABC Bank Ltd.</td>
+                  </tr>
+                  <tr className="border-b border-yellow-200">
+                    <th className="py-2 font-medium">Account Name</th>
+                    <td className="py-2">DashBoard Ltd.</td>
+                  </tr>
+                  <tr className="border-b border-yellow-200">
+                    <th className="py-2 font-medium">Account Number</th>
+                    <td className="py-2">1234567890</td>
+                  </tr>
+                  <tr>
+                    <th className="py-2 font-medium">Routing Number</th>
+                    <td className="py-2">123456789</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
