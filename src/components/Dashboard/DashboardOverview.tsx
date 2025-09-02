@@ -8,7 +8,6 @@ import {
 } from "lucide-react";
 
 export function DashboardOverview() {
-
   // const stats = user?.role === 'admin' ? [
   //   { label: 'Total Members', value: '24', icon: Users, color: 'bg-primary' },
   //   { label: 'Total Deposits', value: '৳45,230', icon: DollarSign, color: 'bg-success' },
@@ -75,7 +74,7 @@ export function DashboardOverview() {
           return (
             <div
               key={index}
-              className="p-6 transition-shadow duration-200 bg-white border border-gray-100 shadow-sm rounded-xl hover:shadow-md"
+              className="p-6 transition-shadow duration-200 bg-white border border-gray-100 shadow-sm cursor-pointer rounded-xl hover:shadow-md"
             >
               <div className="flex items-center">
                 <div className={`${stat.color} p-3 rounded-lg`}>

@@ -173,7 +173,7 @@ export function DepositForm() {
           </div>
 
           <div className="p-6 mx-auto border border-yellow-400 bg-yellow-50 rounded-xl">
-            <h3 className="mb-3 text-xl font-semibold text-yellow-700">
+            <h3 className="mb-3 text-lg font-semibold text-yellow-700">
               Account Details
             </h3>
 
