@@ -7,7 +7,6 @@ import {
   ExternalLink,
   LogOut,
 } from "lucide-react";
-import { useAuth } from "../../hooks/useAuth";
 
 interface SidebarProps {
   activeTab: string;
@@ -15,16 +14,26 @@ interface SidebarProps {
 }
 
 export function Sidebar({ activeTab, onTabChange }: SidebarProps) {
-  const { user, signOut } = useAuth();
+
+  // const menuItems = [
+  //   { id: "dashboard", label: "Dashboard", icon: Home },
+  //   ...(user?.role === "admin"
+  //     ? [
+  //         { id: "members", label: "Members", icon: Users },
+  //         { id: "deposits", label: "Deposits", icon: DollarSign },
+  //       ]
+  //     : [{ id: "deposit", label: "Deposit", icon: DollarSign }]),
+  //   { id: "settings", label: "Settings", icon: Settings },
+  // ];
 
   const menuItems = [
-    { id: "dashboard", label: "Dashboard", icon: Home },
-    ...(user?.role === "admin"
-      ? [
-          { id: "members", label: "Members", icon: Users },
-          { id: "deposits", label: "Deposits", icon: DollarSign },
-        ]
-      : [{ id: "deposit", label: "Deposit", icon: DollarSign }]),
+    { id: "dashboard", label: "Home", icon: Home },
+
+    // { id: "members", label: "Members", icon: Users },
+    { id: "deposits", label: "Deposits", icon: DollarSign },
+
+    // { id: "deposit", label: "Deposit", icon: DollarSign },
+
     { id: "settings", label: "Settings", icon: Settings },
   ];
 
@@ -35,7 +44,8 @@ export function Sidebar({ activeTab, onTabChange }: SidebarProps) {
         <div className="p-6 border-b border-gray-200">
           <h1 className="text-2xl font-bold text-gray-800">DashBoard</h1>
           <p className="mt-1 text-sm text-gray-500">
-            {user?.role === "admin" ? "Admin Panel" : "Member Portal"}
+            {/* {user?.role === "admin" ? "Admin Panel" : "Member Portal"} */}
+            Admin Panel
           </p>
         </div>
 
@@ -81,7 +91,7 @@ export function Sidebar({ activeTab, onTabChange }: SidebarProps) {
             </p>
           </div>
           <button
-            onClick={signOut}
+            // onClick={signOut}
             className="flex items-center w-full px-4 py-2 transition-colors duration-200 rounded-lg text-error hover:bg-error/10"
           >
             <LogOut className="w-4 h-4 mr-3" />
